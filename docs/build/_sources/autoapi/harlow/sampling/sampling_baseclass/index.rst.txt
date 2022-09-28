@@ -1,0 +1,41 @@
+:py:mod:`harlow.sampling.sampling_baseclass`
+============================================
+
+.. py:module:: harlow.sampling.sampling_baseclass
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   harlow.sampling.sampling_baseclass.Sampler
+
+
+
+
+.. py:class:: Sampler(target_function: Callable[[numpy.ndarray], numpy.ndarray], surrogate_model: harlow.surrogating.surrogate_model.Surrogate, domain_lower_bound: numpy.ndarray, domain_upper_bound: numpy.ndarray, fit_points_x: numpy.ndarray = None, fit_points_y: numpy.ndarray = None, test_points_x: numpy.ndarray = None, test_points_y: numpy.ndarray = None, evaluation_metric: Callable = rmse, logging_metrics: list = None, verbose: bool = False, run_name: str = None, save_dir: str = '')
+
+   Bases: :py:obj:`abc.ABC`
+
+   Helper class that provides a standard way to create an ABC using
+   inheritance.
+
+   .. py:method:: sample(n_initial_points: int = 20, n_new_points_per_iteration: int = 1, stopping_criterium: float = 0.05, max_n_iterations: int = 5000)
+      :abstractmethod:
+
+
+   .. py:method:: observer(X)
+
+      Wrapper for the user-specified `target_function` that checks input
+      and output consistency.
+
+
+   .. py:method:: generate_run_name()
+      :staticmethod:
+
+
+

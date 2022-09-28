@@ -1,0 +1,39 @@
+:py:mod:`harlow.visualization.plotting`
+=======================================
+
+.. py:module:: harlow.visualization.plotting
+
+.. autoapi-nested-parse::
+
+   Visualization functions.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   harlow.visualization.plotting.get_cmap
+   harlow.visualization.plotting.plot_function
+   harlow.visualization.plotting.plot_function_custom
+   harlow.visualization.plotting.add_samples_to_plot
+
+
+
+.. py:function:: get_cmap(n: int, name='hsv')
+
+
+.. py:function:: plot_function(f: Callable, domain: numpy.ndarray, grid_size: int = 1000, plot_name: int = None, show: bool = True, save: bool = False)
+
+
+.. py:function:: plot_function_custom(f: Callable, x_mx: numpy.ndarray, y_vec: numpy.ndarray = None, plot_sample_locations: bool = False, plot_name: str = None, show: bool = True, save: bool = False, color: str = 'b')
+
+
+.. py:function:: add_samples_to_plot(plot, x_mx: numpy.ndarray, y_vec: numpy.ndarray, color: str)
+
+
